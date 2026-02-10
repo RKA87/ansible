@@ -1,0 +1,14 @@
+- name: "Install Nginx"
+  hosts: test
+  become: yes # This allows the playbook to run with root privileges, which is often necessary for installing packages and managing services
+  tasks:
+    - name: "Install Nginx package"
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: "Start and enable Nginx service"
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
