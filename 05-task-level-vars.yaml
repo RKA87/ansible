@@ -7,8 +7,8 @@
     TRAINER: "John Doe"
   tasks:
     - name: "Print course details"
-      vars:
-        COURSE: "Ansible for Beginners"
+      vars: #Task level variables which will override the play level variables or global level variables
+        COURSE: "Ansible for Beginners" 
         DURATION: "2 weeks"
       ansible.builtin.debug:
         msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
