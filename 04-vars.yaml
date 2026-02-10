@@ -16,3 +16,4 @@
           Course is: {{ COURSE }}
           Duration: {{ DURATION }}
           Trainer: {{ TRAINER }}
+      versbosity: 1
