@@ -1,6 +1,6 @@
-- name: "Ping the Host"
+- name: Ping the Host
   hosts: test
   tasks:
-    - name: "Ping the Host"
+    - name: Ping the Host
       ansible.builtin.ping:
 
