@@ -1,0 +1,12 @@
+- name: "Task level variables"
+  hosts: local
+  connection: local
+  vars_files:
+    - 06-course-vars.yaml #variable from file defined in this
+  tasks:
+    - name: "Print course details"
+      vars: #Task level variables which will override the play level variables or global level variables
+        COURSE: "Ansible for Beginners" 
+        DURATION: "2 weeks"
+      ansible.builtin.debug:
+        msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
