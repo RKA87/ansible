@@ -1,26 +1,6 @@
-# - name: Play level Variables
-#   hosts: local
-#   connection: local #there is no need to give auth creds while connecting to localhost by using connection
-#   vars:
-#     COURSE: "Ansible for Beginners"
-#     DURATION: "3 hours"
-#     TRAINER: "John Doe"
-#   tasks:
-#     - name: Display course details
-#       ansible.builtin.debug:
-#         msg: "Course is: {{ COURSE }} Duration: {{ DURATION }} Trainer: {{ TRAINER }}"
-    
-#     - name: Display course details with multiline
-#       ansible.builtin.debug:
-#         msg: |
-#           Course is: {{ COURSE }}
-#           Duration: {{ DURATION }}
-#           Trainer: {{ TRAINER }}
-#       verbosity: 1
-
 - name: Play level Variables
   hosts: local
-  connection: local
+  connection: local #there is no need to give auth creds while connecting to localhost by using connection
   vars:
     COURSE: "Ansible for Beginners"
     DURATION: "3 hours"
