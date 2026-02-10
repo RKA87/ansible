@@ -1,5 +1,5 @@
 - name: Hello World
-  hosts: test
+  hosts: test # This is a placeholder for the actual host or group of hosts you want to target from inventory
   tasks:
     - name: Print Hello World
       ansible.builtin.debug:
