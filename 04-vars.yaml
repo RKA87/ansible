@@ -8,4 +8,11 @@
   tasks:
     - name: Display course details
       ansible.builtin.debug:
-        msg: "Course is: {{ COURSE }} \nDuration: {{ DURATION }} \nTrainer: {{ TRAINER }}"
+        msg: "Course is: {{ COURSE }} Duration: {{ DURATION }} Trainer: {{ TRAINER }}"
+    
+    - name: Display course details with multiline
+      ansible.builtin.debug:
+        msg: |
+          Course is: {{ COURSE }}
+          Duration: {{ DURATION }}
+          Trainer: {{ TRAINER }}
