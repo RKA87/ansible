@@ -16,4 +16,4 @@
           Course is: {{ COURSE }}
           Duration: {{ DURATION }}
           Trainer: {{ TRAINER }}
-      versbosity: 1
+      verbosity: 1
