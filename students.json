@@ -1,0 +1,50 @@
+{
+    "students": [
+        {
+            "FirstName": "John",
+            "dob": "1991-01-01",
+            "addresses": [
+                {
+                    "type": "Permanent",
+                    "street": "123 Main St",
+                    "city": "Hyderabad",
+                    "state": "Telangana"
+                },
+                {
+                    "type": "Current",
+                    "street": "123 Main St",
+                    "city": "Hyderabad",
+                    "state": "Telangana"
+                }
+            ],
+            "Skills": [
+                "Python",
+                "Ansible",
+                "Docker"
+            ]
+        },
+        {
+            "FirstName": "Ram",
+            "dob": "1991-01-01",
+            "addresses": [
+                {
+                    "type": "Permanent",
+                    "street": "123 Main St",
+                    "city": "Hyderabad",
+                    "state": "Telangana"
+                },
+                {
+                    "type": "Current",
+                    "street": "123 Main St",
+                    "city": "Hyderabad",
+                    "state": "Telangana"
+                }
+            ],
+            "Skills": [
+                "Python",
+                "Ansible",
+                "Docker"
+            ]
+        }
+    ]
+}

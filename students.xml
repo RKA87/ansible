@@ -1,0 +1,38 @@
+<students>
+    <student>
+        <Firstname>John</Firstname>
+        <Lastname>Doe</Lastname>
+        <Email>john.doe@gmail.com</Email>
+        <!-- Multiple address to create -->
+        <Addresses>
+            <permanentAddress>    
+                <City>Springfield</City>
+                <State>IL</State>
+                <Zip>62701</Zip>
+            </permanentAddress>
+            <currentAddress>
+                <City>Chicago</City>
+                <State>IL</State>
+                <Zip>60601</Zip>
+            </currentAddress>
+        </Addresses>
+    </student>
+    <student>
+        <Firstname>John</Firstname>
+        <Lastname>Doe</Lastname>
+        <Email>john.doe@gmail.com</Email>
+        <!-- Multiple address to create -->
+        <Addresses>
+            <permanentAddress>
+                <City>Springfield</City>
+                <State>IL</State>
+                <Zip>62701</Zip>
+            </permanentAddress>
+            <currentAddress>
+                <City>Chicago</City>
+                <State>IL</State>
+                <Zip>60601</Zip>
+            </currentAddress>
+        </Addresses>
+    </student>
+</students>
