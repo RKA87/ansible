@@ -1,0 +1,14 @@
+- name: demo on loop with installation of packages
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: Install multiple packages using loop
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - git
+        - curl
+        - vim
+      when: ansible_os_family == "RedHat"  #we can set condition using when OS family is RedHat
