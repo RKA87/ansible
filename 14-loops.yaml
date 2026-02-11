@@ -10,5 +10,4 @@
       loop:
         - nginx
         - git
-        - mongodb-org
       when: ansible_os_family == "RedHat"  #we can set condition using when OS family is RedHat
