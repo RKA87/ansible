@@ -1,0 +1,20 @@
+- name : Copy the content into destination file path
+  hosts: local
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Copy the content into destination file path
+      copy:
+        dest: /etc/yum.repos.d/mongo.repo
+        content: |
+          [mongodb-org-7.0]
+          name=MongoDB Repository
+          baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/7.0/x86_64/
+          enabled=1
+          gpgcheck=0
+      register: copy_output
+           
+    - name: Display the output of copy module
+      ansible.builtin.debug:
+      msg: "Output of mongodb repo copy process: {{ copy_output }}"
