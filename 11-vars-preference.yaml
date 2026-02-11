@@ -2,19 +2,19 @@
   hosts: local
   connection: local
   vars:
-    name: ansible from vars
+    NAME: ansible from vars
   vars_files:
     - vars.yaml
   vars_prompt:
-    - name: name
+    - name: NAME
       prompt: "Enter your name"
       private: no
   # tasks:
   #   - name: print the variable
   #     vars:
-  #       name: ansible from task
+  #       NAME: ansible from task
   #     ansible.builtin.debug:        
-  #       msg: "value coming from: {{ name }}"
+  #       msg: "value coming from: {{ NAME }}"
 
 #First priority: Dynamicaly passing argument
 #Second priority: Variable defined in task
