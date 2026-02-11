@@ -1,8 +1,7 @@
-- name : Copy the content into destination file path
+- name: Copy the content into destination file path
   hosts: local
   connection: local
   become: yes
-
   tasks:
     - name: Copy the content into destination file path
       copy:
@@ -14,7 +13,6 @@
           enabled=1
           gpgcheck=0
       register: copy_output
-           
     - name: Display the output of copy module
-      ansible.builtin.debug:
+      ansible.builtin.debug: null
       msg: "Output of mongodb repo copy process: {{ copy_output }}"
