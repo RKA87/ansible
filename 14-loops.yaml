@@ -4,10 +4,11 @@
   become: yes
   tasks:
     - name: Install multiple packages using loop
-      apt:
+      ansible.builtin.package:
         name: "{{ item }}"
         state: present
       loop:
         - nginx
+        - git
         - mongosh
       when: ansible_os_family == "RedHat"  #we can set condition using when OS family is RedHat
