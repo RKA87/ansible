@@ -8,7 +8,6 @@
         name: "{{ item }}"
         state: present
       loop:
-        - git
-        - curl
-        - vim
+        - nginx
+        - mongosh
       when: ansible_os_family == "RedHat"  #we can set condition using when OS family is RedHat
