@@ -8,4 +8,4 @@
   tasks:
     - name: Show inventory variables
       ansible.builtin.debug:
-        msg: "The value of the variable from inventory is: {{ my_variable }}"
+        msg: 'The value of the variable from inventory is: {{ my_variable }}'
