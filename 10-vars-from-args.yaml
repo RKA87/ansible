@@ -5,3 +5,6 @@
     - name: print the variable
       debug:
         msg: "The value of variable input is {{ my_variable }}"
+
+  #Command to execute:
+  # ansible-playbook -i inventory.ini 10-vars-from-args.yaml -e my_variable=argument-check-dynamically
