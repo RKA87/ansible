@@ -8,4 +8,4 @@
     - name: when condition
       debug:
         msg: "This task will run only if the condition is true."
-      when: my_var == "Hello, Ansible!"
+      when: my_var == "Hello!"
