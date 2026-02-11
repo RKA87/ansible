@@ -18,4 +18,4 @@
 
 #First priority: Dynamicaly passing argument
 #Second priority: Variable defined in task
-#Third priority: Variable defined in vars_prompt      
+#Third priority: Variable defined from File "vars.yaml"    
