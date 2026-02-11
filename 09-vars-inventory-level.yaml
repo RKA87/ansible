@@ -1,6 +1,10 @@
 - name: Inventory level variables
   hosts: local
   connection: local
+  vars_prompt:
+    - name: "my_variable"
+      prompt: "Enter a value for my_variable (this will be overridden by inventory variable if defined)"
+      private: no
   tasks:
     - name: Show inventory variables
       ansible.builtin.debug:
