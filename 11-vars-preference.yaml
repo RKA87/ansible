@@ -11,5 +11,7 @@
       private: no
   tasks:
     - name: print the variable
-      ansible.builtin.debug:
+      vars:
+        name: ansible from task
+      ansible.builtin.debug:        
         msg: "The value variable comfing from {{ name }}"
