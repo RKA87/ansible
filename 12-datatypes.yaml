@@ -16,7 +16,7 @@
   tasks:
     - name: print the datatypes
       ansible.builtin.debug:
-        msg: 
+        msg: | #want to print in multiple lines use pipe symbol
           - "Program name is {{ PROGRAM }}"
           - "Duration is {{ DURATION }}"
           - "Is the program live? {{ IS_LIVE }}"
