@@ -1,8 +1,8 @@
 - name: variables preference
   hosts: local
   connection: local
-  vars:
-    NAME: ansible from playbook
+  # vars:
+  #   NAME: ansible from playbook
   # vars_files:
   #   - vars.yaml
   # vars_prompt:
