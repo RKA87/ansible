@@ -1,0 +1,7 @@
+- name: Inventory level variables
+  hosts: local
+  connection: local
+  tasks:
+    - name: Show inventory variables
+      ansible.builtin.debug:
+        msg: "The value of the variable is {{ COURSE }}"
