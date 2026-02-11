@@ -9,9 +9,13 @@
     - name: name
       prompt: "Enter your name"
       private: no
-  tasks:
-    - name: print the variable
-      vars:
-        name: ansible from task
-      ansible.builtin.debug:        
-        msg: "value coming from: {{ name }}"
+  # tasks:
+  #   - name: print the variable
+  #     vars:
+  #       name: ansible from task
+  #     ansible.builtin.debug:        
+  #       msg: "value coming from: {{ name }}"
+
+#First priority: Dynamicaly passing argument
+#Second priority: Variable defined in task
+#Third priority: Variable defined in vars_prompt      
