@@ -3,12 +3,12 @@
   connection: local
   vars:
     NAME: ansible from vars
-  vars_files:
-    - vars.yaml
-  vars_prompt:
-    - name: NAME
-      prompt: "Enter your name"
-      private: no
+  # vars_files:
+  #   - vars.yaml
+  # vars_prompt:
+  #   - name: NAME
+  #     prompt: "Enter your name"
+  #     private: no
   tasks:
     - name: print the variable
   #     vars:
@@ -19,3 +19,6 @@
 #First priority: Dynamicaly passing argument
 #Second priority: Variable defined in task
 #Third priority: Variable defined from File "vars.yaml"
+#Fourth priority: Variable defined from Prompt
+#fifth priority: Variable defined from playbook itself vars
+#Sixth priority: Variable defined from inventory file
