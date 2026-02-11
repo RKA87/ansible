@@ -14,4 +14,4 @@
       vars:
         name: ansible from task
       ansible.builtin.debug:        
-        msg: "The value variable comfing from {{ name }}"
+        msg: "value coming from: {{ name }}"
