@@ -1,0 +1,24 @@
+- name: understanding datatypes
+  hosts: localhost
+  connection: local
+  vars:
+    PROGRAM: "DevOps with AWS Cloud" #STRING
+    DURATION: 4 #Integer
+    IS_LIVE: true #boolean
+    TOPICS: #List
+      - Ansible
+      - Terraform
+      - Docker
+      - Kubernetes
+    DETAILS: #map/Dictionary {}
+      MONTHS: 4
+      INSTRUCTOR: "Shivaji"
+  tasks:
+    - name: print the datatypes
+      ansible.builtin.debug:
+        msg: 
+          - "Program name is {{ PROGRAM }}"
+          - "Duration is {{ DURATION }}"
+          - "Is the program live? {{ IS_LIVE }}"
+          - "Topics covered in the program are {{ TOPICS }}"
+          - "Details of the program are {{ DETAILS }}"
