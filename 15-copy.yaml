@@ -13,6 +13,7 @@
           enabled=1
           gpgcheck=0
       register: copy_output
+      
     - name: Display the output of copy module
       ansible.builtin.debug:
         msg: "Output of mongodb repo copy process: {{ copy_output }}"
