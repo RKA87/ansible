@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-    - name: Show inventory variables
+    - name: Show inventory variables #in inentory file we are pointing to local:vars section
       ansible.builtin.debug:
         msg: "The value of the variable from inventory is defined about Course: {{ COURSE }}"

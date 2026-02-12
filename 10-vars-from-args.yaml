@@ -7,4 +7,5 @@
         msg: "The value of variable input is {{ my_variable }}"
 
   #Command to execute:
-  # ansible-playbook -i inventory.ini 10-vars-from-args.yaml -e my_variable=argument-check-dynamically
+  # ansible-playbook -i inventory.ini 10-vars-from-args.yaml -e my_variable=argument-check-dynamically, here we must define the variable using -e as mandatory
+  

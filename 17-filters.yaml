@@ -1,0 +1,8 @@
+- name: "Use filters to manipulate data in Ansible"
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: "Example of using filters to manipulate data"
+      ansible.builtin.debug:
+        msg: "Hi, RakeshKumar! {{ my_variable | default('good morning')}}"
