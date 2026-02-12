@@ -11,6 +11,10 @@
       learning_time: "4 months"
 
   tasks:
+    - name: print the dictionary which has key and value paris
+      ansible.builtin.debug:
+        msg: "Hi, Details follows: {{ details_map }}"
+
     - name: print the dictionary and its elements
       ansible.builtin.debug:
         msg: "Hi, Details follows: Name: {{ details_map.name }}, Project: {{ details_map.project }}, Current Environment: {{ details_map.current_env }}, Learning Time: {{ details_map.learning_time }}"
