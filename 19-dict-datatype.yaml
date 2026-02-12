@@ -4,7 +4,7 @@
   became: true
 
   vars:
-    details: #make sure not to use reserved keywords like dict or tags
+    details_map: #make sure not to use reserved keywords like dict or tags
       name: "DevOps with AWS Cloud"
       project: "learning devops"
       current_env: "ansible"
@@ -13,8 +13,29 @@
   tasks:
     - name: print the dictionary and its elements
       ansible.builtin.debug:
-        msg: "Hi, Details follows: Name: {{ details.name }}, Project: {{ details.project }}, Current Environment: {{ details.current_env }}, Learning Time: {{ details.learning_time }}"
+        msg: "Hi, Details follows: Name: {{ details_map.name }}, Project: {{ details_map.project }}, Current Environment: {{ details_map.current_env }}, Learning Time: {{ details_map.learning_time }}"
     
     - name: print the dictionary into list elements
       ansible.builtin.debug:
-        msg: "Hi, Details follows: {{ details | dict2items }}"
+        msg: "Hi, Details follows: {{ details_map | dict2items }}"
+
+    - name: set fact to convert dict to list      
+      ansible.builtin.set_fact:
+        details_list_output: "{{ details_map | dict2items }}"
+    
+    - name: print the list elements into dict again
+      ansible.builtin.debug:
+        msg: "Hi, Details follows: {{ details_list_output| items2dict }}"
+
+
+# - name: print the list elements into dict
+#   ansible.builtin.debug:
+#     msg: "Hi, Details follows: {{ details_list_output.msg | items2dict }}"
+
+# Hints to remember:
+
+# You generally cannot directly use register keyword on a ansible.builtin.debug task because it contains metadata of entire data
+
+# In this case, You should use "set_fact" keyword, it stores the actual data structure in a variable
+
+# Each task can only have one module to use
