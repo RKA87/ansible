@@ -4,7 +4,7 @@
   became: true
 
   vars:
-    details:
+    details: #make sure not to use reserved keywords like dict or tags
     name: "DevOps with AWS Cloud"
     project: "learning devops"
     current_env: "ansible"
