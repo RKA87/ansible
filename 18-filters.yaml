@@ -1,0 +1,15 @@
+- name: "use filters to manipulate the data in ansible"
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    topics: devops, docker, kubernetes, ansible #this datatype is call as string of elements so we need to convert it into list using split filter
+
+  tasks:
+    - name: "example of using filters to manipulate data"
+      ansible.builtin.debug:
+        msg: "Topics: {{ topics | split(', ') }}"
+
+    - name: "another example of using filters to manipulate data"
+      ansible.builtin.debug:
+        msg: "Hi, RakeshKumar! {{ my_variable | default('Welcome to ansible filter') }}"
