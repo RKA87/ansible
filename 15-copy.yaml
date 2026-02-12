@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: Copy the content into destination file path
-      copy:
+      ansible.builtin.copy:
         dest: /etc/yum.repos.d/mongo.repo
         content: |
           [mongodb-org-7.0]
