@@ -1,0 +1,20 @@
+- name: "Accessing the dictionary and its elements from ansible"
+  hosts: localhost
+  connection: local
+  became: true
+
+  vars:
+    details:
+    name: "DevOps with AWS Cloud"
+    project: "learning devops"
+    current_env: "ansible"
+    learning_time: "4 months"
+
+  tasks:
+    - name: print the dictionary and its elements
+      ansible.builtin.debug:
+        msg: "Hi, Details follows: Name: {{ details.name }}, Project: {{ details.project }}, Current Environment: {{ details.current_env }}, Learning Time: {{ details.learning_time }}"
+    
+    - name: print the dictionary into list elements
+      ansible.builtin.debug:
+        msg: "Hi, Details follows: {{ details | dict2items }}"
