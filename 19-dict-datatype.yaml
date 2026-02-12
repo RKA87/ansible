@@ -1,7 +1,7 @@
 - name: "Accessing the dictionary and its elements from ansible"
   hosts: localhost
   connection: local
-  became: true
+  # became: true
 
   vars:
     details_map: #make sure not to use reserved keywords like dict or tags
