@@ -9,5 +9,5 @@
         state: "{{ item.state }}"
       loop:
         - { name: 'nginx', state: present }
-        - { name: 'git', state: present } 
+        - { name: 'git', state: present }
       when: ansible_os_family == "RedHat"  #we can set condition using when OS family is RedHat
