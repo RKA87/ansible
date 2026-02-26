@@ -1,4 +1,4 @@
-- name: Inventory level variables
+- name: Inventory level variables #it is nothing but define the variable in inventory.ini file like hostgroup:vars
   hosts: local
   connection: local
   tasks:
